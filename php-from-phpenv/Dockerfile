@@ -30,7 +30,7 @@ RUN git clone git://github.com/CHH/php-build.git /usr/local/php-build
 RUN /usr/local/php-build/install.sh
 
 # install php
-RUN php-build 5.4.29 /usr/local/phpenv/versions/5.4.29
+RUN php-build -i development --pear 5.4.29 /usr/local/phpenv/versions/5.4.29
 
 # register and rehash php
 RUN /usr/local/phpenv/bin/phpenv global 5.4.29
